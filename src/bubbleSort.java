@@ -16,8 +16,8 @@ public class bubbleSort {
           using fro loop then check if the word start with one of the vowels.
           If that is true print the word else go to the next word.
      */
-    public static void main(String[] args){
-        String [] word = new String[3];
+    public static void main(String[] args) {
+        String[] word = new String[10];
         int count = 0;
         String swap;
         Scanner sc = new Scanner(System.in);
@@ -25,10 +25,10 @@ public class bubbleSort {
         /*
             ask user to enter 10 words
          */
-        for (int i = 0; i < word.length; i++){
+        for (int i = 0; i < word.length; i++) {
             count++;
             System.out.print(count + ". Enter a word: ");
-            word [i] = sc.nextLine(); // Store the word on my word array.
+            word[i] = sc.nextLine(); // Store the word on my word array.
         }
         System.out.println();
 
@@ -37,7 +37,7 @@ public class bubbleSort {
             of the words as the user entered the words.
          */
         System.out.println("Original order: ");
-        for (int i = 0; i < word.length; i++){
+        for (int i = 0; i < word.length; i++) {
             System.out.print(word[i] + " ");
         }
         System.out.println();
@@ -48,16 +48,16 @@ public class bubbleSort {
             order.
             Bubble sorting.
          */
-        for (int i = 0; i < word.length; i++)
-        {
-            for(int x = i + 1; x < word.length; x++){
-                // this IF code compare the strings and order in asc order.
-                if(word[i].compareToIgnoreCase(word[x]) > 0){
-                    swap = word[i];
-                    word[i] = word[x];
-                    word[x] = swap;
-                }
 
+        int n = word.length;
+        for (int i = 0; i < n - 1; i++){
+            for (int j = 0; j < n - i - 1; j++) {
+                if (word[j].compareToIgnoreCase(word[j + 1]) > 0) {
+                    // swap arr[j+1] and arr[i]
+                    String temp = word[j];
+                    word[j] = word[j + 1];
+                    word[j + 1] = temp;
+                }
             }
         }
 
