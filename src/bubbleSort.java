@@ -17,7 +17,7 @@ public class bubbleSort {
           If that is true print the word else go to the next word.
      */
     public static void main(String[] args){
-        String [] word = new String[10];
+        String [] word = new String[3];
         int count = 0;
         String swap;
         Scanner sc = new Scanner(System.in);
@@ -60,7 +60,7 @@ public class bubbleSort {
 
             }
         }
-        
+
         /*
             This for loop print the ascending ordered words from the array
          */
@@ -88,9 +88,11 @@ public class bubbleSort {
      */
         System.out.println("Words that starts with a vowel:");
         for(int i = 0; i < word.length; i++){
-            if(word[i].charAt(0) == 'a' || word[i].charAt(0) == 'e' ||
-                    word[i].charAt(0) == 'o' || word[i].charAt(0) == 'i' ||
-                        word[i].charAt(0) == 'u')
+            if(word[i].charAt(0) == 'a' || word[i].charAt(0) == 'A' ||
+                    word[i].charAt(0) == 'e' || word[i].charAt(0) == 'E' ||
+                    word[i].charAt(0) == 'o' || word[i].charAt(0) == 'O' ||
+                    word[i].charAt(0) == 'i' || word[i].charAt(0) == 'I' ||
+                    word[i].charAt(0) == 'u' || word[i].charAt(0) == 'U')
             {
                 System.out.print(word[i] + " ");
 
